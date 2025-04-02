@@ -104,9 +104,10 @@ function uint8ToHex(uint8array: Uint8Array) {
     ).join('');
 }
 
-const proofHex = uint8ToHex(new Uint8Array([ 203, 134, 113, 209, 136, 67, 15, 21 ]));
+const proofHex = uint8ToHex(new Uint8Array([ 64, 173, 206, 232, 70, 198, 206, 35 ]));
 console.log(proofHex, 'proofHex');
-//c0070d0b7261cfb5
-//[ 192, 7, 13, 11, 114, 97, 207, 181 ]
-//[ 203, 134, 113, 209, 136, 67, 15, 21 ]
-// sui client call --package 0x097a3833b6b5c62ca6ad10f0509dffdadff7ce31e1d86e63e884a14860cedc0f --module lets_move --function get_flag --args 0xcb8671d188430f15 "pwh-pwh" 0x19e76ca504c5a5fa5e214a45fca6c058171ba333f6da897b82731094504d5ab9 0x8
+//0x40adcee846c6ce23
+//[ 64, 173, 206, 232, 70, 198, 206, 35 ]
+
+//sui client call --package 0x097a3833b6b5c62ca6ad10f0509dffdadff7ce31e1d86e63e884a14860cedc0f --module lets_move --function get_flag --args 0x40adcee846c6ce23 "pwh-pwh" 0x19e76ca504c5a5fa5e214a45fca6c058171ba333f6da897b82731094504d5ab9 0x8
+//tx: 9ayXkr6a5QyyQ9YqzUx3hkUUjz3SY7xSkAXp37mNHjrU
