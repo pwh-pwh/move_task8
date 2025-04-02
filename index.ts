@@ -38,7 +38,7 @@ const Address = bcs.bytes(32).transform({
     input: (val: string) => fromHex(val),
     output: (val) => toHex(val),
 });
-const sender = '0xaf795c762d38591318bf7c471552ce9034be41552eb3607c382776b3b9e68859';
+const sender = '0x5ef482d17a7f4b6a95ce19e07132da3dd283e25347c57c1b639f35c1ed2fc26b';
 const senderBytes = Address.serialize(sender).toBytes();
 
 // 查找有效proof
@@ -104,9 +104,9 @@ function uint8ToHex(uint8array: Uint8Array) {
     ).join('');
 }
 
-const proofHex = uint8ToHex(new Uint8Array([ 192, 7, 13, 11, 114, 97, 207, 181 ]));
+const proofHex = uint8ToHex(new Uint8Array([ 203, 134, 113, 209, 136, 67, 15, 21 ]));
 console.log(proofHex, 'proofHex');
 //c0070d0b7261cfb5
 //[ 192, 7, 13, 11, 114, 97, 207, 181 ]
-
-// sui client call --package 0x097a3833b6b5c62ca6ad10f0509dffdadff7ce31e1d86e63e884a14860cedc0f --module lets_move --function get_flag --args 0xc0070d0b7261cfb5 "pwh-pwh" 0x19e76ca504c5a5fa5e214a45fca6c058171ba333f6da897b82731094504d5ab9 0x8
+//[ 203, 134, 113, 209, 136, 67, 15, 21 ]
+// sui client call --package 0x097a3833b6b5c62ca6ad10f0509dffdadff7ce31e1d86e63e884a14860cedc0f --module lets_move --function get_flag --args 0xcb8671d188430f15 "pwh-pwh" 0x19e76ca504c5a5fa5e214a45fca6c058171ba333f6da897b82731094504d5ab9 0x8
